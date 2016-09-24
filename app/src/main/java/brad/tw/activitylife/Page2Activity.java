@@ -6,11 +6,16 @@ import android.os.Bundle;
 import android.util.Log;
 
 public class Page2Activity extends AppCompatActivity {
+    private BradApp app;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page2);
+
+        app = (BradApp)getApplication();
+        Log.d("brad", app.var1 + " : " + app.var2);
+
 
         Intent it = getIntent();
         int stage = it.getIntExtra("stage",-1);

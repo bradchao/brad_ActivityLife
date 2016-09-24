@@ -72,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
         it.putExtra("username", "brad");
         it.putExtra("stage", 4);
         it.putExtra("sound", false);
+
+
+        //it.p
+
         startActivity(it);
     }
     public void test2(View v){finish();}

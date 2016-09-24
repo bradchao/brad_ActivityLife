@@ -82,6 +82,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Log.d("brad", "onActivityResult");
+        int key1 = data.getIntExtra("key1", -1);
+        String key2 = data.getStringExtra("key2");
+        Log.d("brad", "onActivityResult:" +resultCode );
+        Log.d("brad", "key1:" +key1 );
+        Log.d("brad", "key2:" +key2 );
+
     }
 }

@@ -22,6 +22,17 @@ public class MainActivity extends AppCompatActivity {
         startActivity(it);
     }
 
+    public void test2(View v){
+        finish();
+    }
+
+    @Override
+    public void finish() {
+        Log.d("brad", "finish");
+
+        super.finish();
+        
+    }
 
     @Override
     protected void onRestart() {

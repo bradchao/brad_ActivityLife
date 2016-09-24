@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+    private BradApp app;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +15,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
        Log.d("brad", "onCreate");
+
+        app = (BradApp)getApplication();
+        Log.d("brad", app.var1 + " : " + app.var2);
+        app.var1 = "Hello";
+        app.var2 = 321;
 
     }
 

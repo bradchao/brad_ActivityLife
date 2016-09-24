@@ -17,21 +17,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void test1(View v){
-        Intent it = new Intent(this, Page2Activity.class);
-        startActivity(it);
-    }
-
-    public void test2(View v){
-        finish();
-    }
-
     @Override
     public void finish() {
         Log.d("brad", "finish");
 
         super.finish();
-        
+
     }
 
     @Override
@@ -70,4 +61,24 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         Log.d("brad", "onStop");
     }
+
+    public void test1(View v){
+        // FIXME - mmm kjjfg jkjjdsfjj dfg
+        Intent it = new Intent(this, Page2Activity.class);
+        it.putExtra("username", "brad");
+        it.putExtra("stage", 4);
+        it.putExtra("sound", false);
+        startActivity(it);
+    }
+
+    public void test2(View v){
+        // TODO - jj jtjj ejjt ert
+        finish();
+    }
+
+    public void test3(View v){
+        // xxxxxx
+        setContentView(R.layout.activity_page2);
+    }
+
 }

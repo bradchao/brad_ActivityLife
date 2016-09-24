@@ -78,15 +78,24 @@ public class MainActivity extends AppCompatActivity {
         //startActivity(it);
         startActivityForResult(it, 123);
     }
+    public void test4(View v){
+        Intent it = new Intent(this, Page3Activity.class);
+        startActivityForResult(it, 321);
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        int key1 = data.getIntExtra("key1", -1);
-        String key2 = data.getStringExtra("key2");
-        Log.d("brad", "onActivityResult:" +resultCode );
-        Log.d("brad", "key1:" +key1 );
-        Log.d("brad", "key2:" +key2 );
+
+        if (requestCode == 123) {
+            int key1 = data.getIntExtra("key1", -1);
+            String key2 = data.getStringExtra("key2");
+            Log.d("brad", "onActivityResult:" + resultCode);
+            Log.d("brad", "key1:" + key1);
+            Log.d("brad", "key2:" + key2);
+        }else if (requestCode == 321){
+            Log.d("brad", "Page3 Back");
+        }
 
     }
 }
